@@ -1,0 +1,30 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  font-family: "Roboto mono";
+}
+
+body {
+  background-color: orange;
+  background: linear-gradient(rgb(0, 166, 255), pink);
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  padding: 1em;
+}
+
+.container {
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+}
+
+.text-wrapper {
+  flex-direction: column;
+  justify-content: center;
+  max-width: 50%;
+}
