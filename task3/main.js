@@ -11,6 +11,8 @@
 
 let userName, question;
 
+//List of functions used by the run() function
+
 function getUserName() {
   userName = prompt("Please enter a name");
 }
@@ -20,22 +22,22 @@ function getQuestion() {
   console.log(question);
 }
 
-function userNameCheck (name) {
+//Checks if username is not an empty string
+function userNameCheck(name) {
   if (name === "") {
     getUserName();
-  }
-  else {
+  } else {
     alert(`Hello ${userName}`);
   }
   console.log(userName);
 }
 
 function randomNumber(number) {
-  return Math.floor((Math.random() * number) + 1);
+  return Math.floor(Math.random() * number + 1);
 }
 
-function getAnswer (number) {
-  switch(number) {
+function getAnswer(number) {
+  switch (number) {
     case 1:
       console.log("The stars say yes, go for it!");
       break;
@@ -69,7 +71,16 @@ function getAnswer (number) {
   }
 }
 
-getUserName(); 
-userNameCheck(userName);
-getQuestion();
-getAnswer(randomNumber(10));
+// Use run function to run the Decision making app
+
+function run() {
+  getUserName();
+  userNameCheck(userName);
+  getQuestion();
+  getAnswer(randomNumber(10));
+}
+
+// Event listeners
+
+const runButton = document.querySelector(".btn");
+runButton.addEventListener("click", run);
