@@ -1,0 +1,22 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 80%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+
+.text-wrapper {
+    /* outline: 1px solid blue; */
+}
+
+
+
+body {
+    margin: 0 auto;
+}
+
