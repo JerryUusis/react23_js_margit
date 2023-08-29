@@ -1,13 +1,50 @@
 * {
     box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
 }
 
 body {
+    color: #333;
     margin: 0 auto;
     padding: 0;
 
 }
 
 main {
-    text-align: center;
+    margin: auto;
+    width: 60%;
+}
+
+div {
+    margin: 15px 0;
+
+}
+
+p {
+    margin-bottom: 2rem;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+}
+
+input {
+    width: 200px;
+    padding: 5px;
+}
+
+input,
+button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+button {
+    background-color: chocolate;
+    color: white;
+    padding: 5px 25px;
+    border: none;
+    border-radius: 2px;
+    margin: 20px 0;
 }
