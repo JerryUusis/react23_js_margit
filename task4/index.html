@@ -15,15 +15,15 @@
         <p>Make a program that asks the price of the gasoline and amount of money from the user. The program calculates how much gasoline the user gets with the money. The result is displayed on to screen. </p>
         <p>If there are more than 10 litres, then the mesage on the screen: "good, you can escape now" if less it shows the message: "Ups, you have to stay here."</p>
             <div>
-                <label for="price">Price</label>
+                <label for="price">Gas price</label>
                 <input type="number" id="price" name="price" placeholder="Enter price">
             </div>
             <div>
                 <label for="money">Money</label>
                 <input type="number" id="money" name="money" placeholder="Enter money">
             </div>
-        <button>Calculate</button>
-        <p>Answer will be here</p>
+        <button onclick="calcGasoline()">Calculate</button>
+        <p id="sum">Answer will be here</p>
     </main>
     <script src="main.js"></script>
 </body>
