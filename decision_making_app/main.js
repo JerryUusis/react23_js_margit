@@ -10,7 +10,7 @@ const answerTextContent = answerText.textContent;
 
 //Generates a random number between 1 and number
 
-function randomNumber(number) {
+function generateRandomNumber(number) {
     return Math.floor(Math.random() * number + 1);
 }
 
@@ -19,49 +19,45 @@ function randomNumber(number) {
 function getAnswer(number) {
     switch (number) {
         case 1:
-            console.log("The stars say yes, go for it!");
-            break;
+            return "The stars say yes, go for it!";
         case 2:
-            console.log("Trust your instincts and take the leap");
-            break;
+            return "Trust your instincts and take the leap";
         case 3:
-            console.log("Hmm, better try again later.");
-            break;
+            return "Hmm, better try again later.";
         case 4:
-            console.log("Consider all options before making a move.");
-            break;
+            return "Consider all options before making a move.";
         case 5:
-            console.log("Outlook is bright, proceed with confidence.");
-            break;
+            return "Outlook is bright, proceed with confidence.";
         case 6:
-            console.log("Seek advice from a trusted friend before deciding.");
-            break;
+            return "Seek advice from a trusted friend before deciding.";
         case 7:
-            console.log("Signs point to unexpected opportunities.");
-            break;
+            return "Signs point to unexpected opportunities.";
         case 8:
-            console.log("It's a toss-up, make a choice and see what happens.");
-            break;
+            return "It's a toss-up, make a choice and see what happens.";
         case 9:
-            console.log("Take a step back and reassess before moving forward.");
-            break;
+            return "Take a step back and reassess before moving forward.";
         case 10:
-            console.log("Not the right time, patience will bring better results.");
-            break;
+            return "Not the right time, patience will bring better results.";
+    }
+}
+
+function generateAnswer() {
+    if (nameInput.value === "") {
+        return `Hello! ${getAnswer(generateRandomNumber(10))}`;
+    }
+    else {
+        return `Hello ${nameInput.value}! ${getAnswer(generateRandomNumber(10))}`;
     }
 }
 
 //Checks that user has provided content in input fields
 
-function checkInputFields() {
-    if (nameInput.value === "" && questionInput.value === "") {
-        answerText.textContent = "Please enter a question and a name";
-    }
-    else if (nameInput.value === "") {
-        answerText.textContent = "Please enter a name";
-    }
-    else if (questionInput.value === "") {
+function checkQuestionInputField() {
+    if (questionInput.value === "") {
         answerText.textContent = "Please enter a question";
+    }
+    else if (questionInput.value !== "") {
+        answerText.textContent = generateAnswer();
     }
 }
 
@@ -72,6 +68,6 @@ function resetAnswerText() {
 // Event listeners
 
 runButton.addEventListener("click", () => {
-    checkInputFields();
-    resetInputFields();
+    checkQuestionInputField();
+
 });
