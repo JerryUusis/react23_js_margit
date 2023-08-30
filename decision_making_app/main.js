@@ -1,3 +1,11 @@
+//DOM variables
+
+const nameInput = document.querySelector("#name");
+const questionInput = document.querySelector("#question");
+const runButton = document.querySelector(".btn");
+const answerText = document.querySelector("#answer");
+const answerTextContent = answerText.textContent;
+
 //Functions section
 
 //Generates a random number between 1 and number
@@ -43,13 +51,20 @@ function getAnswer(number) {
     }
 }
 
-// DOM variables
-
-const runButton = document.querySelector(".btn");
+function checkInputFields() {
+    if (nameInput.value === "" && questionInput.value === "") {
+        answerText.textContent = "Please enter a question and a name";
+    }
+    else if (nameInput.value === "") {
+        answerText.textContent = "Please enter a name";
+    }
+    else if (questionInput.value === "") {
+        answerText.textContent = "Please enter a question";
+    }
+}
 
 // Event listeners
 
 runButton.addEventListener("click", () => {
-
-}
-)
+    checkInputFields();
+});
