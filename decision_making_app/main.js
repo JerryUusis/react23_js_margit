@@ -1,8 +1,8 @@
 //DOM variables
-
 const nameInput = document.querySelector("#name");
 const questionInput = document.querySelector("#question");
 const runButton = document.querySelector(".btn");
+const greetingText = document.querySelector("#greeting");
 const answerText = document.querySelector("#answer");
 const answerTextContent = answerText.textContent;
 
@@ -51,6 +51,8 @@ function getAnswer(number) {
     }
 }
 
+//Checks that user has provided content in input fields
+
 function checkInputFields() {
     if (nameInput.value === "" && questionInput.value === "") {
         answerText.textContent = "Please enter a question and a name";
@@ -63,8 +65,13 @@ function checkInputFields() {
     }
 }
 
+function resetAnswerText() {
+    answerText.textContent = "";
+}
+
 // Event listeners
 
 runButton.addEventListener("click", () => {
     checkInputFields();
+    resetInputFields();
 });
