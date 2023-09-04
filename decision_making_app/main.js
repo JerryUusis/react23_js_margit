@@ -10,13 +10,13 @@ const answerTextContent = answerText.textContent;
 
 //Generates a random number between 1 and number
 
+
+//Randomizes an option from 10 options
 function generateRandomNumber(number) {
     return Math.floor(Math.random() * number + 1);
 }
 
-//Randomizes an option from 1-10
-
-function getAnswer(number) {
+function generateAnswer(number) {
     switch (number) {
         case 1:
             return "The stars say yes, go for it!";
@@ -41,12 +41,14 @@ function getAnswer(number) {
     }
 }
 
-function generateAnswer() {
+//Generates an answer from
+
+function getAnswer() {
     if (nameInput.value === "") {
-        return `Hello! ${getAnswer(generateRandomNumber(10))}`;
+        return `Hello! ${generateAnswer(generateRandomNumber(10))}`;
     }
     else {
-        return `Hello ${nameInput.value}! ${getAnswer(generateRandomNumber(10))}`;
+        return `Hello ${nameInput.value}! ${generateAnswer(generateRandomNumber(10))}`;
     }
 }
 
@@ -57,7 +59,7 @@ function checkQuestionInputField() {
         answerText.textContent = "Please enter a question";
     }
     else if (questionInput.value !== "") {
-        answerText.textContent = generateAnswer();
+        answerText.textContent = getAnswer();
     }
 }
 
@@ -69,5 +71,4 @@ function resetAnswerText() {
 
 runButton.addEventListener("click", () => {
     checkQuestionInputField();
-
 });

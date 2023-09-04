@@ -29,6 +29,8 @@ h1 {
     padding: 5rem;
     width: 60%;
     outline: var(--almost-black) 2px solid;
+    min-width: 550px;
+    max-width: 750px;
 }
 
 label {
