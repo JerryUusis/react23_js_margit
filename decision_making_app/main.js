@@ -8,16 +8,19 @@ const answerTextContent = answerText.textContent;
 
 //Functions section
 
-//Generates a random number between 1 and number
+//Randomizes and returns an answer from 10 options
 
+function generateAnswer() {
 
-//Randomizes an option from 10 options
-function generateRandomNumber(number) {
-    return Math.floor(Math.random() * number + 1);
-}
+    //Generates a random number between 1 and 10
 
-function generateAnswer(number) {
-    switch (number) {
+    function generateRandomNumber() {
+        return Math.floor(Math.random() * 10 + 1);
+    }
+
+    const randomNumber = generateRandomNumber();
+
+    switch (randomNumber) {
         case 1:
             return "The stars say yes, go for it!";
         case 2:
@@ -41,14 +44,14 @@ function generateAnswer(number) {
     }
 }
 
-//Generates an answer from
+//Returns an answer and greet
 
 function getAnswer() {
     if (nameInput.value === "") {
-        return `Hello! ${generateAnswer(generateRandomNumber(10))}`;
+        return `Hello! ${generateAnswer()}`;
     }
     else {
-        return `Hello ${nameInput.value}! ${generateAnswer(generateRandomNumber(10))}`;
+        return `Hello ${nameInput.value}! ${generateAnswer()}`;
     }
 }
 
