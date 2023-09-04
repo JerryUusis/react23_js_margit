@@ -33,7 +33,7 @@ function getToppingsValue() {
             toppingCount++;
             // First 4 topping are free. After 4th topping they cost 0.50 each.
             if (toppingCount > 4) {
-                toppingsCost+= 0.50;
+                toppingsCost += 0.50;
             }
         }
     }
@@ -47,7 +47,14 @@ function getDeliveryCost() {
 
 // Every time you click some part of the form, the price gets updated
 function updateCost() {
-    totalAmount.textContent = `${getPizzaSizeValue() + getToppingsValue() + getDeliveryCost()}`
+    const pizzaSize = getPizzaSizeValue(); 
+
+    for (let i = 0; i < toppingCheckBoxes.length; i++) {
+        toppingCheckBoxes[i].disabled = isNaN(pizzaSize); // Sets all the toppingCheckBoxes disabled attribute value to false if pizzaSize has a numeric value
+        deliveryOption.disabled = isNaN(pizzaSize); // Sets #delivery disabled to false if pizzaSize has any numeric value
+    }
+
+    totalAmount.textContent = `${(getPizzaSizeValue() + getToppingsValue() + getDeliveryCost()).toFixed(2)} €`
 }
 
 // Event listeners
@@ -55,7 +62,7 @@ function updateCost() {
 // Pizza size radio buttons
 
 for (let i = 0; i < pizzaSizeRadios.length; i++) {
-    pizzaSizeRadios[i].addEventListener("click",updateCost);
+    pizzaSizeRadios[i].addEventListener("click", updateCost);
 }
 
 // Pizza topping checkboxes
