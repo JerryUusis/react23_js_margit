@@ -8,95 +8,104 @@
 </head>
 <body>
     <h1>Pizza order application</h1>
-    <fieldset class="customer-info">
-        <legend>Customer info</legend>
-        <label for="customer-name">Customer name</label>
-        <input type="text" id="customer-name" name="customer-name">
-    </fieldset>
-    <fieldset class="pizza-size">
-        <legend>Pizza size</legend>
-        <input type="radio" id="pizza-size-2" name="pizza-size">
-        <label for="pizza-size-2">2 servings (7,50€)</label>
-        <input type="radio" id="pizza-size-4" name="pizza-size">
-        <label for="pizza-size-4">4 servings (10,50€)</label>
-        <input type="radio" id="pizza-size-6" name="pizza-size">
-        <label for="pizza-size-6">6 servings (12,50€)</label>
-        <input type="radio" id="pizza-size-8" name="pizza-size">
-        <label for="pizza-size-8">8 servings (15,50€)</label>
-    </fieldset>
-    <fieldset class="toppings">
-        <legend>Choose toppings</legend>
-        <p>First four toppings come for free. After 4th topping á 0,50€</p>
-        <fieldset class="cheese">
-            <legend>Cheese</legend>
-            <input type="checkbox" id="mozzarella" name="mozzarella">
-            <label for="mozzarella">Mozzarella</label>
-            <input type="checkbox" id="gorgonzola" name="gorgonzola">
-            <label for="gorgonzola">Gorgonzola</label>
-            <input type="checkbox" id="parmeggiano" name="parmeggiano">
-            <label for="parmeggiano">Parmeggiano</label>
+
+        <!-- Customer section -->
+        <fieldset class="customer-info">
+            <legend>Customer info</legend>
+            <label for="customer-name">Customer name</label>
+            <input type="text" id="customer-name" name="customer-name">
         </fieldset>
-        <fieldset class="herb">
-            <legend>Fresh herbs</legend>
-            <input type="checkbox" id="rucola" name="rucola">
-            <label for="rucola">Rucola</label>
-            <input type="checkbox" id="basilica" name="basilica">
-            <label for="basilica">Basilica</label>
+
+        <!-- Pizza size section -->
+        <fieldset class="pizza-size">
+            <legend>Pizza size</legend>
+            <input type="radio" id="pizza-size-2" name="pizza-size" value="7.50">
+            <label for="pizza-size-2" >2 servings (7,50€)</label>
+            <input type="radio" id="pizza-size-4" name="pizza-size" value="10.50">
+            <label for="pizza-size-4">4 servings (10,50€)</label>
+            <input type="radio" id="pizza-size-6" name="pizza-size" value="12.50">
+            <label for="pizza-size-6">6 servings (12,50€)</label>
+            <input type="radio" id="pizza-size-8" name="pizza-size" value="15.50">
+            <label for="pizza-size-8">8 servings (15,50€)</label>
         </fieldset>
-        <fieldset class="meat">
-            <legend>Meats</legend>
-            <input type="checkbox" id="mortadella" name="mortadella">
-            <label for="mortadella">Mortadella</label>
-            <input type="checkbox" id="prosciutto" name="prosciutto">
-            <label for="prosciutto">Prosciutto</label>
-            <input type="checkbox" id="salami" name="salami">
-            <label for="salami">Salami</label>
-            <input type="checkbox" id="pepperoni" name="pepperoni">
-            <label for="mozzarella">Pepperoni</label>
+
+        <!-- Toppings section -->
+        <fieldset class="toppings">
+            <legend>Choose toppings</legend>
+            <p>First four (4) toppings come for free. After 4th topping á 0,50€.</p>
+            <fieldset class="cheese">
+                <legend>Cheese</legend>
+                <input type="checkbox" id="mozzarella" name="topping">
+                <label for="mozzarella">Mozzarella</label>
+                <input type="checkbox" id="gorgonzola" name="topping">
+                <label for="gorgonzola">Gorgonzola</label>
+                <input type="checkbox" id="parmeggiano" name="topping">
+                <label for="parmeggiano">Parmeggiano</label>
+            </fieldset>
+            <fieldset class="herb">
+                <legend>Fresh herbs</legend>
+                <input type="checkbox" id="rucola" name="topping">
+                <label for="rucola">Rucola</label>
+                <input type="checkbox" id="basilica" name="topping">
+                <label for="basilica">Basilica</label>
+            </fieldset>
+            <fieldset class="meat">
+                <legend>Meats</legend>
+                <input type="checkbox" id="mortadella" name="topping">
+                <label for="mortadella">Mortadella</label>
+                <input type="checkbox" id="prosciutto" name="topping">
+                <label for="prosciutto">Prosciutto</label>
+                <input type="checkbox" id="salami" name="topping">
+                <label for="salami">Salami</label>
+                <input type="checkbox" id="pepperoni" name="topping">
+                <label for="pepperoni">Pepperoni</label>
+            </fieldset>
+            <fieldset class="green">
+                <legend>Veggies</legend>
+                <input type="checkbox" id="tomato" name="topping">
+                <label for="tomato">Tomato</label>
+                <input type="checkbox" id="mushroom" name="topping">
+                <label for="mushroom">Champignon</label>
+                <input type="checkbox" id="olive" name="topping">
+                <label for="olive">Olive</label>
+                <input type="checkbox" id="broccoli" name="topping">
+                <label for="broccoli">Broccoli</label>
+            </fieldset>
+            <fieldset class="seafood">
+                <legend>Seafood</legend>
+                <input type="checkbox" id="tuna" name="topping">
+                <label for="tuna">Tuna</label>
+                <input type="checkbox" id="anchovy" name="topping">
+                <label for="anchovy">Anchovy</label>
+                <input type="checkbox" id="clam" name="topping">
+                <label for="clam">Clam</label>
+                <input type="checkbox" id="shrimp" name="topping">
+                <label for="shrimp">Shrimp</label>
+            </fieldset>
+            <fieldset class="paste">
+                <legend>Pastes</legend>
+                <input type="checkbox" id="garlic" name="topping">
+                <label for="garlic">Garlic</label>
+                <input type="checkbox" id="nduja" name="topping">
+                <label for="nduja">'Nduja</label>
+                <input type="checkbox" id="pesto" name="topping">
+                <label for="pesto">Pesto</label>
+            </fieldset>
+
+            <!-- Delivery section -->
+            <fieldset class="delivery-method">
+                <legend>Delivery options</legend>
+                <select name="delivery" id="delivery">
+                    <option value="0">Choose</option>
+                    <option value="5">Delivery home (+5€)</option>
+                    <option value="0">Takeaway</option>
+                    <option value="0">Eat in</option>
+                </select>
+            </fieldset>
         </fieldset>
-        <fieldset class="green">
-            <legend>Veggies</legend>
-            <input type="checkbox" id="tomato" name="tomato">
-            <label for="tomato">Tomato</label>
-            <input type="checkbox" id="mushroom" name="mushroom">
-            <label for="mushroom">Champignon</label>
-            <input type="checkbox" id="olive" name="olive">
-            <label for="olive">Olive</label>
-            <input type="checkbox" id="broccoli" name="broccoli">
-            <label for="broccoli">Broccoli</label>
-        </fieldset>
-        <fieldset class="seafood">
-            <legend>Seafood</legend>
-            <input type="checkbox" id="tuna" name="tuna">
-            <label for="tuna">Tuna</label>
-            <input type="checkbox" id="anchovy" name="anchovy">
-            <label for="anchovy">Anchovy</label>
-            <input type="checkbox" id="clam" name="clam">
-            <label for="clam">Clam</label>
-            <input type="checkbox" id="shrimp" name="shrimp">
-            <label for="shrimp">Shrimp</label>
-        </fieldset>
-        <fieldset class="paste">
-            <legend>Pastes</legend>
-            <input type="checkbox" id="garlic" name="garlic">
-            <label for="garlic">Garlic</label>
-            <input type="checkbox" id="nduja" name="nduja">
-            <label for="nduja">'Nduja</label>
-            <input type="checkbox" id="pesto" name="pesto">
-            <label for="pesto">Pesto</label>
-        </fieldset>
-        <fieldset class="delivery-method">
-            <legend>Delivery options</legend>
-            <label for="delivery">Delivery method</label>
-            <select name="delivery" id="delivery">
-                <option value="delivery-home">Delivery home (+5€)</option>
-                <option value="delivery-pickup">Takeaway</option>
-                <option value="delivery-eat-in">Eat in</option>
-            </select>
-        </fieldset>
-    </fieldset>
-    <p >Your total is: </p>
-    <p id="total"></p>
-    <script src="main.js"></script>
+
+        <!-- Total amount section -->
+        <p>Order total: <span id="total"></span></p>
+        <script src="main.js"></script>
 </body>
 </html>
