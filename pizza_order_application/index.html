@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza order application</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=MonteCarlo">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Pizza order application</h1>
 
+<body>
+    <h1>Trattoria Nuova Casa</h1>
+
+    <form action="" class="container">
         <!-- Customer section -->
         <fieldset class="customer-info">
             <legend>Customer info</legend>
@@ -20,7 +24,7 @@
         <fieldset class="pizza-size">
             <legend>Pizza size</legend>
             <input type="radio" id="pizza-size-2" name="pizza-size" value="7.50">
-            <label for="pizza-size-2" >2 servings (7,50€)</label>
+            <label for="pizza-size-2">2 servings (7,50€)</label>
             <input type="radio" id="pizza-size-4" name="pizza-size" value="10.50">
             <label for="pizza-size-4">4 servings (10,50€)</label>
             <input type="radio" id="pizza-size-6" name="pizza-size" value="12.50">
@@ -30,8 +34,8 @@
         </fieldset>
 
         <!-- Toppings disabled section -->
-        <fieldset class="toppings disabled">
-            <legend>Choose toppings disabled</legend>
+        <fieldset class="toppings">
+            <legend>Choose toppings</legend>
             <p>First four (4) toppings disabled come for free. After 4th topping á 0,50€.</p>
             <fieldset class="cheese">
                 <legend>Cheese</legend>
@@ -93,19 +97,21 @@
             </fieldset>
 
             <!-- Delivery section -->
-            <fieldset class="delivery-method">
-                <legend>Delivery options</legend>
-                <select name="delivery" id="delivery" disabled>
-                    <option value="0">Choose</option>
-                    <option value="5">Delivery home (+5€)</option>
-                    <option value="0">Takeaway</option>
-                    <option value="0">Eat in</option>
-                </select>
-            </fieldset>
         </fieldset>
+        <fieldset class="delivery-method">
+            <legend>Delivery options</legend>
+            <select name="delivery" id="delivery" disabled>
+                <option value="0">Choose</option>
+                <option value="5">Delivery home (+5€)</option>
+                <option value="0">Takeaway</option>
+                <option value="0">Eat in</option>
+            </select>
+        </fieldset>
+    </form>
 
-        <!-- Total amount section -->
-        <p>Order total: <span id="total"></span></p>
-        <script src="main.js"></script>
+    <!-- Total amount section -->
+    <p>Order total: <span id="total"></span></p>
+    <script src="main.js"></script>
 </body>
+
 </html>
