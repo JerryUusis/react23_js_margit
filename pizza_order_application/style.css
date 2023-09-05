@@ -14,6 +14,7 @@ body {
     width: 50%;
     margin-right: auto;
     outline: 2px solid red;
+    display: inline-block;
 }
 
 h1 {
@@ -36,10 +37,68 @@ form {
 
 fieldset {
     padding: 1rem;
-    color: #015c01;
+    color: red;
     border: red solid 2px;
+}
+
+fieldset p {
+    color: #015c01;
 }
 
 legend {
     font-size: 1.5rem;
+    padding: 0 0.25rem
 }
+
+hr {
+    margin: 2rem 0;
+    border: red solid 1px;
+}
+
+section {
+    padding: 1rem;
+    color: #015c01;
+}
+
+label {
+    color: #015c01;
+}
+
+input {
+    accent-color: #015c01;
+}
+
+input[type="text"] {
+    border: none;
+    vertical-align: baseline;
+    outline: #015c01 1px solid;
+}
+
+input[type="text"]:focus {
+    background-color: beige;
+}
+
+input[type="radio"] {
+    vertical-align: auto;
+}
+input[type="checkbox"] {
+    vertical-align: baseline;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    border-color: #015c01;
+}
+
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+    accent-color: #015c01;
+}
+
+input[type="checkbox"]:checked:hover,
+input[type="radio"]:checked:hover {
+    accent-color: green;
+}
+
+
