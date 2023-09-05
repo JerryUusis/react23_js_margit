@@ -4,6 +4,7 @@ const pizzaSizeRadios = document.querySelectorAll("input[name='pizza-size']");
 const toppingCheckBoxes = document.querySelectorAll("input[name='topping']");
 const deliveryOption = document.querySelector("#delivery");
 let totalAmount = document.querySelector("#total");
+const disabledContent = document.querySelector(".hidden");
 
 // Functions section
 
@@ -47,9 +48,13 @@ function getDeliveryCost() {
 function updateCost() {
     const pizzaSize = getPizzaSizeValue(); 
 
-    for (let i = 0; i < toppingCheckBoxes.length; i++) {
-        toppingCheckBoxes[i].disabled = isNaN(pizzaSize); // Sets all the toppingCheckBoxes disabled attribute value to false if pizzaSize has a numeric value
-        deliveryOption.disabled = isNaN(pizzaSize); // Sets #delivery disabled to false if pizzaSize has any numeric value
+    if (isNaN(pizzaSize) === false) {
+
+        for (let i = 0; i < toppingCheckBoxes.length; i++) {
+            toppingCheckBoxes[i].disabled = false; // Sets all the toppingCheckBoxes disabled attribute value to false if pizzaSize has a numeric value
+            deliveryOption.disabled = false; // Sets #delivery disabled to false if pizzaSize has any numeric value
+        }
+        disabledContent.style.opacity = "1";
     }
 
     totalAmount.textContent = `${(getPizzaSizeValue() + getToppingsValue() + getDeliveryCost()).toFixed(2)} €`
@@ -57,7 +62,7 @@ function updateCost() {
 
 // Event listeners
 
-// Updates the cost when pizza
+// Updates the cost when pizza size is seleceted
 
 for (let i = 0; i < pizzaSizeRadios.length; i++) {
     pizzaSizeRadios[i].addEventListener("click", updateCost);

@@ -33,81 +33,84 @@
             <label for="pizza-size-8">8 servings (15,50€)</label>
         </fieldset>
 
-        <!-- Toppings disabled section -->
-        <fieldset class="toppings">
-            <legend>Choose toppings</legend>
-            <p>First four (4) toppings disabled come for free. After 4th topping á 0,50€.</p>
-            <fieldset class="cheese">
-                <legend>Cheese</legend>
-                <input type="checkbox" id="mozzarella" name="topping" disabled>
-                <label for="mozzarella">Mozzarella</label>
-                <input type="checkbox" id="gorgonzola" name="topping" disabled>
-                <label for="gorgonzola">Gorgonzola</label>
-                <input type="checkbox" id="parmeggiano" name="topping" disabled>
-                <label for="parmeggiano">Parmeggiano</label>
+        <!-- Toppings section -->
+        <div class="hidden">
+            <fieldset class="toppings">
+                <legend>Choose toppings</legend>
+                <p>First four (4) toppings disabled come for free. After 4th topping á 0,50€.</p>
+                <fieldset class="cheese">
+                    <legend>Cheese</legend>
+                    <input type="checkbox" id="mozzarella" name="topping" disabled>
+                    <label for="mozzarella">Mozzarella</label>
+                    <input type="checkbox" id="gorgonzola" name="topping" disabled>
+                    <label for="gorgonzola">Gorgonzola</label>
+                    <input type="checkbox" id="parmeggiano" name="topping" disabled>
+                    <label for="parmeggiano">Parmeggiano</label>
+                </fieldset>
+                <fieldset class="herb">
+                    <legend>Fresh herbs</legend>
+                    <input type="checkbox" id="rucola" name="topping" disabled>
+                    <label for="rucola">Rucola</label>
+                    <input type="checkbox" id="basilica" name="topping" disabled>
+                    <label for="basilica">Basilica</label>
+                </fieldset>
+                <fieldset class="meat">
+                    <legend>Meats</legend>
+                    <input type="checkbox" id="mortadella" name="topping" disabled disabled>
+                    <label for="mortadella">Mortadella</label>
+                    <input type="checkbox" id="prosciutto" name="topping" disabled>
+                    <label for="prosciutto">Prosciutto</label>
+                    <input type="checkbox" id="salami" name="topping" disabled>
+                    <label for="salami">Salami</label>
+                    <input type="checkbox" id="pepperoni" name="topping" disabled>
+                    <label for="pepperoni">Pepperoni</label>
+                </fieldset>
+                <fieldset class="green">
+                    <legend>Veggies</legend>
+                    <input type="checkbox" id="tomato" name="topping" disabled>
+                    <label for="tomato">Tomato</label>
+                    <input type="checkbox" id="mushroom" name="topping" disabled>
+                    <label for="mushroom">Champignon</label>
+                    <input type="checkbox" id="olive" name="topping" disabled>
+                    <label for="olive">Olive</label>
+                    <input type="checkbox" id="broccoli" name="topping" disabled>
+                    <label for="broccoli">Broccoli</label disabled>
+                </fieldset>
+                <fieldset class="seafood">
+                    <legend>Seafood</legend>
+                    <input type="checkbox" id="tuna" name="topping" disabled>
+                    <label for="tuna">Tuna</label>
+                    <input type="checkbox" id="anchovy" name="topping" disabled>
+                    <label for="anchovy">Anchovy</label>
+                    <input type="checkbox" id="clam" name="topping" disabled>
+                    <label for="clam">Clam</label>
+                    <input type="checkbox" id="shrimp" name="topping" disabled>
+                    <label for="shrimp">Shrimp</label>
+                </fieldset>
+                <fieldset class="paste">
+                    <legend>Pastes</legend>
+                    <input type="checkbox" id="garlic" name="topping" disabled>
+                    <label for="garlic">Garlic</label>
+                    <input type="checkbox" id="nduja" name="topping" disabled>
+                    <label for="nduja">'Nduja</label>
+                    <input type="checkbox" id="pesto" name="topping" disabled>
+                    <label for="pesto">Pesto</label>
+                </fieldset>
+                <!-- Delivery section -->
             </fieldset>
-            <fieldset class="herb">
-                <legend>Fresh herbs</legend>
-                <input type="checkbox" id="rucola" name="topping" disabled>
-                <label for="rucola">Rucola</label>
-                <input type="checkbox" id="basilica" name="topping" disabled>
-                <label for="basilica">Basilica</label>
+            <fieldset class="delivery-method">
+                <legend>Delivery options</legend>
+                <select name="delivery" id="delivery" disabled>
+                    <option value="0">Choose</option>
+                    <option value="5">Delivery home (+5€)</option>
+                    <option value="0">Takeaway</option>
+                    <option value="0">Eat in</option>
+                </select>
             </fieldset>
-            <fieldset class="meat">
-                <legend>Meats</legend>
-                <input type="checkbox" id="mortadella" name="topping" disabled disabled>
-                <label for="mortadella">Mortadella</label>
-                <input type="checkbox" id="prosciutto" name="topping" disabled>
-                <label for="prosciutto">Prosciutto</label>
-                <input type="checkbox" id="salami" name="topping" disabled>
-                <label for="salami">Salami</label>
-                <input type="checkbox" id="pepperoni" name="topping" disabled>
-                <label for="pepperoni">Pepperoni</label>
-            </fieldset>
-            <fieldset class="green">
-                <legend>Veggies</legend>
-                <input type="checkbox" id="tomato" name="topping" disabled>
-                <label for="tomato">Tomato</label>
-                <input type="checkbox" id="mushroom" name="topping" disabled>
-                <label for="mushroom">Champignon</label>
-                <input type="checkbox" id="olive" name="topping" disabled>
-                <label for="olive">Olive</label>
-                <input type="checkbox" id="broccoli" name="topping" disabled>
-                <label for="broccoli">Broccoli</label disabled>
-            </fieldset>
-            <fieldset class="seafood">
-                <legend>Seafood</legend>
-                <input type="checkbox" id="tuna" name="topping" disabled>
-                <label for="tuna">Tuna</label>
-                <input type="checkbox" id="anchovy" name="topping" disabled>
-                <label for="anchovy">Anchovy</label>
-                <input type="checkbox" id="clam" name="topping" disabled>
-                <label for="clam">Clam</label>
-                <input type="checkbox" id="shrimp" name="topping" disabled>
-                <label for="shrimp">Shrimp</label>
-            </fieldset>
-            <fieldset class="paste">
-                <legend>Pastes</legend>
-                <input type="checkbox" id="garlic" name="topping" disabled>
-                <label for="garlic">Garlic</label>
-                <input type="checkbox" id="nduja" name="topping" disabled>
-                <label for="nduja">'Nduja</label>
-                <input type="checkbox" id="pesto" name="topping" disabled>
-                <label for="pesto">Pesto</label>
-            </fieldset>
-
-            <!-- Delivery section -->
-        </fieldset>
-        <fieldset class="delivery-method">
-            <legend>Delivery options</legend>
-            <select name="delivery" id="delivery" disabled>
-                <option value="0">Choose</option>
-                <option value="5">Delivery home (+5€)</option>
-                <option value="0">Takeaway</option>
-                <option value="0">Eat in</option>
-            </select>
-        </fieldset>
+        </div>
         <hr>
+        <!-- Total amount section -->
+        
             <section class="order-total">
                 <legend>Total</legend>
                 <p>Order total: <span id="total"></span></p>
@@ -115,7 +118,6 @@
             <script src="main.js"></script>
         </form>
 
-        <!-- Total amount section -->
         
 </body>
 
