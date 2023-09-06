@@ -49,12 +49,11 @@ function updateCost() {
     const pizzaSize = getPizzaSizeValue(); 
 
     if (isNaN(pizzaSize) === false) {
-
         for (let i = 0; i < toppingCheckBoxes.length; i++) {
             toppingCheckBoxes[i].disabled = false; // Sets all the toppingCheckBoxes disabled attribute value to false if pizzaSize has a numeric value
             deliveryOption.disabled = false; // Sets #delivery disabled to false if pizzaSize has any numeric value
         }
-        disabledContent.style.opacity = "1";
+        disabledContent.style.opacity = "1"; //Sets disabled content to fully visible
     }
 
     totalAmount.textContent = `${(getPizzaSizeValue() + getToppingsValue() + getDeliveryCost()).toFixed(2)} €`
