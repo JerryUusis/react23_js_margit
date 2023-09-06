@@ -1,10 +1,13 @@
 // DOM variables
 const customerName = document.querySelector("#customer-name");
 const pizzaSizeRadios = document.querySelectorAll("input[name='pizza-size']");
+const pizzaSizeList = document.querySelector("#pizza-size-list");
 const toppingCheckBoxes = document.querySelectorAll("input[name='topping']");
 const deliveryOption = document.querySelector("#delivery");
 let totalAmount = document.querySelector("#total");
 const disabledContent = document.querySelector(".hidden");
+const totalList = document.querySelector("#order-total-list");
+const newItem = document.createElement("li");
 
 // Functions section
 
@@ -44,6 +47,22 @@ function getDeliveryCost() {
     return parseFloat(deliveryOption.value);
 }
 
+// Adds an item to a receipt NOT USED YET
+function addItemsToList(item) {
+    const newItem = document.createElement("li");
+    newItem.textContent = `${item.getAttribute("data-custom-value")} ${item.value}`;
+    totalList.appendChild(newItem);
+}
+
+// Changes the text value of li item on the total section
+function updatePizzaSizeToList() {
+    for (let i = 0; i < pizzaSizeRadios.length; i++) {
+        if (pizzaSizeRadios[i].checked === true) {
+            pizzaSizeList.textContent = pizzaSizeRadios[i].getAttribute("data-custom-value");
+        }
+    }
+}
+
 // Every time you click some part of the form, the price gets updated
 function updateCost() {
     const pizzaSize = getPizzaSizeValue(); 
@@ -55,7 +74,7 @@ function updateCost() {
         }
         disabledContent.style.opacity = "1"; //Sets disabled content to fully visible
     }
-
+    updatePizzaSizeToList();
     totalAmount.textContent = `${(getPizzaSizeValue() + getToppingsValue() + getDeliveryCost()).toFixed(2)} €`
 }
 

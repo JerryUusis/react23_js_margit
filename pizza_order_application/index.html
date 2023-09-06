@@ -24,19 +24,19 @@
         <fieldset class="pizza-size">
             <legend>Pizza size</legend>
             <label for="pizza-size-2" class="input-label-wrapper">
-                <input type="radio" id="pizza-size-2" name="pizza-size" value="7.50">
+                <input type="radio" id="pizza-size-2" name="pizza-size" value="7.50" data-custom-value="2 servings">
                 2 servings (7,50€)
             </label>
             <label for="pizza-size-4" class="input-label-wrapper">
-                <input type="radio" id="pizza-size-4" name="pizza-size" value="10.50">
+                <input type="radio" id="pizza-size-4" name="pizza-size" value="10.50" data-custom-value="4 servings">
                 4 servings (10,50€)
             </label>
             <label for="pizza-size-6" class="input-label-wrapper">
-                <input type="radio" id="pizza-size-6" name="pizza-size" value="12.50">
+                <input type="radio" id="pizza-size-6" name="pizza-size" value="12.50" data-custom-value="6 servings">
                 6 servings (12,50€)
             </label>
-            <label for="pizza-size-8" class="input-label-wrapper"><input type="radio" id="pizza-size-8"
-                    name="pizza-size" value="15.50">
+            <label for="pizza-size-8" class="input-label-wrapper">
+                <input type="radio" id="pizza-size-8" name="pizza-size" value="15.50" data-custom-value="8 servings">
                 8 servings (15,50€)
             </label>
         </fieldset>
@@ -161,6 +161,9 @@
 
         <!-- Total amount section -->
         <section class="order-total">
+            <ul id="order-total-list">
+                <li id="pizza-size-list"></li>
+            </ul>
             <main class="text-wrapper">
                 <p>Order total:</p>
                 <p id="total"></p>
