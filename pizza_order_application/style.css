@@ -9,6 +9,7 @@
 body {
     background: url(img/pizza_backround_huge.jpeg) no-repeat center center/cover;
     width: 100%;
+    min-height: 100vh;
 }
 
 h1 {
@@ -22,6 +23,7 @@ h1 {
 
 .container {
     width: 50%;
+    min-height: 100vh;
     margin-right: auto;
     outline: 2px solid red;
     background-color: white;
@@ -65,6 +67,10 @@ label {
 }
 
 /* Input styles */
+
+.input-label-wrapper {
+    display: inline-block;
+}
 
 input {
     font-size: 1.25rem;
