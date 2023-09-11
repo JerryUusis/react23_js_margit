@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza order application</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=MonteCarlo">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -69,7 +71,7 @@
                     </label>
                     <label class="input-label-wrapper" for="basilica">
                         <input type="checkbox" id="basilica" name="topping" disabled>
-                        Basilica
+                        Basil
                     </label>
                 </fieldset>
                 <fieldset class="meat">
@@ -145,7 +147,7 @@
                     </label>
                 </fieldset>
 
-                <!-- Delivery section -->
+            <!-- Delivery section -->
             </fieldset>
             <fieldset class="delivery-method">
                 <legend>Delivery options</legend>
@@ -161,9 +163,6 @@
 
         <!-- Total amount section -->
         <section class="order-total">
-            <ul id="order-total-list">
-                <li id="pizza-size-list"></li>
-            </ul>
             <main class="text-wrapper">
                 <p>Order total:</p>
                 <p id="total"></p>

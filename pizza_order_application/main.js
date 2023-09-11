@@ -7,7 +7,6 @@ const deliveryOption = document.querySelector("#delivery");
 let totalAmount = document.querySelector("#total");
 const disabledContent = document.querySelector(".hidden");
 const totalList = document.querySelector("#order-total-list");
-const newItem = document.createElement("li");
 
 // Functions section
 

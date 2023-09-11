@@ -22,6 +22,7 @@ h1 {
 }
 
 .container {
+    font-family: 'Roboto', sans-serif;
     width: 50%;
     min-height: 100vh;
     margin-right: auto;
@@ -39,7 +40,9 @@ fieldset {
 }
 
 fieldset p {
+    font-size: 1.25rem;
     color: #015c01;
+    padding: 1rem 0rem
 }
 
 legend {
@@ -111,10 +114,18 @@ input[type="radio"]:checked:hover {
     accent-color: green;
 }
 
+select {
+    font-size: 1.25rem;
+    color: #015c01;
+    min-width: 30%;
+    border-color: #015c01;
+}
+
 /* Misc */
 /* Used to hide disabled content until a pizza size is selected */
+
 .hidden {
-    opacity: 0.5;
+    opacity: 0.3;
 }
 
 .text-wrapper {
