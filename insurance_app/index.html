@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance app</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="Jerry Uusitalo">
+</head>
+
+<body>
+    <form action="">
+
+        <!-- Customer info section -->
+        <fieldset>
+            <legend>Customer info</legend>
+            <div class="input-container">
+                <label for="first-name">First name:</label>
+                <input type="text" id="first-name">
+            </div>
+            <div class="input-container">
+                <label for="last-name">Last name:</label>
+                <input type="text" id="last-name">
+            </div>
+            <label for="age">Age:</label>
+            <input type="number" id="age">
+            <fieldset>
+                <legend>Current health</legend>
+                <div class="input-container">
+                    <input type="checkbox" id="hypertension">
+                    <label for="hypertension">Hypertension</label>
+                </div>
+                <div class="input-container">
+                    <input type="checkbox" id="blood-sugar">
+                    <label for="blood-sugar">High blood sugar</label>
+                </div>
+                <div class="input-container">
+                    <input type="checkbox" id="overweight">
+                    <label for="overweight">Overweight</label>
+                </div>
+            </fieldset>
+            <fieldset>
+
+                <!-- Habits section -->
+                <legend>Habits</legend>
+
+                <!-- Healthy habits -->
+                <fieldset>
+                    <legend>Healthy habits</legend>
+                    <div class="input-container">
+                        <input type="checkbox" id="regular-exercise">
+                        <label for="regular-exercise">Regular exercise</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="checkbox" id="healthy-diet">
+                        <label for="healthy-diet">Healthy diet</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="checkbox" id="adequate-sleep">
+                        <label for="adequate-sleep">Adequate sleep</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="checkbox" id="stress-management">
+                        <label for="stress-management">Stress management</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="checkbox" id="healthy-alcohol">
+                        <label for="healthy-alcohol">Moderate alcohol consumption</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="checkbox" id="non-smoking">
+                        <label for="non-smoking">Non-smoking</label>
+                    </div>
+                </fieldset>
+
+                <!-- Unhealthy habits -->
+                <fieldset>
+                <legend>Unhealthy habits</legend>
+                    <div class="input-container">
+                        <input type="checkbox" id="smoking">
+                        <label for="smoking">Smoking</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="checkbox" id="unhealthy-alcohol">
+                        <label for="unhealthy-alcohol">Excessive alcohol consumption</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="checkbox" id="no-exercise">
+                        <label for="no-exercise">Lack of exercise</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="checkbox" id="poor-diet">
+                        <label for="poor-diet">Poor diet</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="checkbox" id="inadequate-sleep">
+                        <label for="inadequate-sleep">Inadequate Sleep</label>
+                    </div>
+                </fieldset>
+                <hr>
+                <h2>Your risk score is</h2>
+                <p id="risk-score"></p>
+                <p>Your risk score is calculated according to your age and living habits.</p>
+            </fieldset>
+    </form>
+
+    <script src="main.js"></script>
+</body>
+</html>
