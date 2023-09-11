@@ -1,5 +1,4 @@
 //DOM variables
-const nameInput = document.querySelector("#name");
 const questionInput = document.querySelector("#question");
 const runButton = document.querySelector(".btn");
 const greetingText = document.querySelector("#greeting");
@@ -47,15 +46,10 @@ function generateAnswer() {
 //Returns an answer and greet
 
 function getAnswer() {
-    if (nameInput.value === "") {
         return `Hello! ${generateAnswer()}`;
-    }
-    else {
-        return `Hello ${nameInput.value}! ${generateAnswer()}`;
-    }
 }
 
-//Checks that user has provided content in input fields
+//Checks that user has provided content in input field
 
 function checkQuestionInputField() {
     if (questionInput.value === "") {
@@ -64,10 +58,6 @@ function checkQuestionInputField() {
     else if (questionInput.value !== "") {
         answerText.textContent = getAnswer();
     }
-}
-
-function resetAnswerText() {
-    answerText.textContent = "";
 }
 
 // Event listeners
