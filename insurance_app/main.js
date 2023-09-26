@@ -1,12 +1,29 @@
 //DOM variables
 let riskScore = 500;
-const firstName = document.querySelector("#first-name");
-const lastName = document.querySelector("#last-name");
-const userAge = document.querySelector("#age");
+
+//input
+const firstName = document.querySelector("#first-name").value;
+const lastName = document.querySelector("#last-name").value;
+const userAge = +document.querySelector("#age").value;
 const currentHealthCheckBoxes = document.querySelectorAll(".current-health");
-const healthyCheckBoxes = document.querySelectorAll(".healthy-habits");
-const unHealthyCheckBoxes = document.querySelectorAll(".unhealthy-habits");
+const healthyCheckboxes = document.querySelectorAll(".healthy-habits");
+const unHealthyCheckboxes = document.querySelectorAll(".unhealthy-habits");
+
+//output
 
 
 //Functions
 
+function getAge() {
+    return userAge.value;
+}
+
+function getCheckboxesCount(checkboxArray) { 
+    let count = 0;
+    for (let element of checkboxArray) {
+        if (element.checked === true) {
+            count++
+        }
+    }
+    return ((count * 0.01) = riskScore);
+}
