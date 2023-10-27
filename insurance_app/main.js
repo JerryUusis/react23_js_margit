@@ -4,7 +4,7 @@ let riskScore = 500;
 //input
 const firstName = document.querySelector("#first-name").value;
 const lastName = document.querySelector("#last-name").value;
-const userAge = +document.querySelector("#age").value;
+const userAge = document.querySelector("#age").value;
 const currentHealthCheckBoxes = document.querySelectorAll(".current-health");
 const healthyCheckboxes = document.querySelectorAll(".healthy-habits");
 const unHealthyCheckboxes = document.querySelectorAll(".unhealthy-habits");
